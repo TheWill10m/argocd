@@ -17,7 +17,7 @@ spec:
       - name: homepage
         image: ghcr.io/benphelps/homepage:v0.6.17
         ports:
-          - containerPort: 80
+          - containerPort: 3000
             name: http
         volumeMounts:
         - name: homepage-data
