@@ -5,6 +5,11 @@ metadata:
   namespace: default
   annotations:
     nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    gethomepage.dev/description: Dynamically Detected Homepage
+    gethomepage.dev/enabled: "true"
+    gethomepage.dev/group: Cluster Management
+    gethomepage.dev/icon: homepage.png
+    gethomepage.dev/name: Homepage
 spec:
   ingressClassName: "nginx"
   tls:
