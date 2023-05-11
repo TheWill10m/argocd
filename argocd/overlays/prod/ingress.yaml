@@ -1,0 +1,10 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: argocd-server-ingress
+spec:
+  tls:
+    - hosts:
+        - argocd.prd.wdalgleish.com
+  rules:
+  - host: argocd.prd.wdalgleish.com

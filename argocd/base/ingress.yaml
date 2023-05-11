@@ -12,10 +12,10 @@ spec:
   ingressClassName: "nginx"
   tls:
     - hosts:
-        - argocd.dev.wdalgleish.com
+        - argocd.wdalgleish.com
       secretName: argocd-tls
   rules:
-  - host: argocd.dev.wdalgleish.com
+  - host: argocd.wdalgleish.com
     http:
       paths:
       - path: /
