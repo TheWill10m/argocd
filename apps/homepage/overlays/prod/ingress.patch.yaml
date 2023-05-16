@@ -7,7 +7,7 @@ spec:
   tls:
     - hosts:
         - dashboard.prd.wdalgleish.com
-      secretName: dashboard-tls
+      secretName: dashboard-prd-tls
     - hosts:
         - dashboard.wdalgleish.com
       secretName: dashboard-tls
