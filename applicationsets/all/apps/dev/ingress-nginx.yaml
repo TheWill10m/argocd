@@ -1,3 +1,4 @@
-name: ingress-nginx
-namespace: ingress-nginx
-app_path: helm-ingress-nginx
+application:
+  name: ingress-nginx
+  namespace: ingress-nginx
+  path: helm-ingress-nginx
