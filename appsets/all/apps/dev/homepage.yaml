@@ -1,0 +1,4 @@
+application:
+  name: homepage
+  namespace: homepage
+  path: apps/homepage/overlays/dev
