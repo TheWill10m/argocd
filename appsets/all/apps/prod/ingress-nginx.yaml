@@ -1,0 +1,4 @@
+application:
+  name: ingress-nginx
+  namespace: ingress-nginx
+  path: helm-ingress-nginx
