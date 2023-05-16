@@ -1,0 +1,34 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: homepage
+spec:
+  ingressClassName: "nginx"
+  tls:
+    - hosts:
+        - dashboard.prd.wdalgleish.com
+      secretName: dashboard-tls
+    - hosts:
+        - dashboard.wdalgleish.com
+      secretName: dashboard-tls
+  rules:
+  - host: dashboard.prd.wdalgleish.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: homepage
+            port:
+              name: http
+  - host: dashboard.wdalgleish.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: homepage
+            port:
+              name: http

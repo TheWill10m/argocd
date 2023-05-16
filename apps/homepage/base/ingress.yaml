@@ -12,18 +12,3 @@ metadata:
     gethomepage.dev/name: Homepage
 spec:
   ingressClassName: "nginx"
-  tls:
-    - hosts:
-        - dashboard.dev.wdalgleish.com
-      secretName: dashboard-tls
-  rules:
-  - host: dashboard.dev.wdalgleish.com
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: homepage
-            port:
-              name: http
