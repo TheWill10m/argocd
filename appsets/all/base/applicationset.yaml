@@ -9,7 +9,7 @@ spec:
       repoURL: https://github.com/thewill10m/argocd.git
       revision: main
       files:
-      - path: applicationsets/all/apps/*.yaml
+      - path: appsets/all/apps/*.yaml
   template:
     metadata:
       name: '{{application.name}}'
