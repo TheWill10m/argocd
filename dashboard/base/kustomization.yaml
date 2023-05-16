@@ -1,6 +1,5 @@
 resources:
   - clusterRole.yaml
-  - configmap.yaml
   - deployment.yaml
   - ingress.yaml
   - service.yaml
