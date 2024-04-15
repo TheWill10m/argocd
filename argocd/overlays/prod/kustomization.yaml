@@ -1,9 +1,0 @@
-bases:
-  - ../../base
-
-patches:
-  - target:
-      group: networking.k8s.io
-      version: v1
-      kind: Ingress
-    path: ingress-patch.yaml
