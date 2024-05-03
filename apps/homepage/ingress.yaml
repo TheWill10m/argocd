@@ -5,13 +5,12 @@ metadata:
   name: homepage
   namespace: default
   labels:
-    app: homepage
-  # annotations:
-  # gethomepage.dev/description: Dynamically Detected Homepage
-  # gethomepage.dev/enabled: "true"
-  # gethomepage.dev/group: Cluster Management
-  # gethomepage.dev/icon: homepage.png
-  # gethomepage.dev/name: Homepage
+    app.kubernetes.io/name: homepage
+  annotations:
+    nginx.ingress.kubernetes.io/affinity: "cookie"
+    nginx.ingress.kubernetes.io/session-cookie-name: "route"
+    nginx.ingress.kubernetes.io/session-cookie-expires: "172800"
+    nginx.ingress.kubernetes.io/session-cookie-max-age: "172800"
 spec:
   ingressClassName: nginx
   rules:

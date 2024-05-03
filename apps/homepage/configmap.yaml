@@ -28,21 +28,21 @@ data:
   services.yaml: |
     - Infrastructure:
       - PVE:
-        icon: si-proxmox-#E57000
-        href: https://ferrix.lab.wdalgleish.com:8006/
-        description: Proxmox Virtual Environment cluster
+          icon: si-proxmox-#E57000
+          href: https://ferrix.lab.wdalgleish.com:8006/
+          description: Proxmox Virtual Environment cluster
       - PBS:
-        icon: si-proxmox-#E57000
-        href: https://pbs.lab.wdalgleish.com:8007/
-        description: Proxmox Backup Server
+          icon: si-proxmox-#E57000
+          href: https://pbs.lab.wdalgleish.com:8007/
+          description: Proxmox Backup Server
       - PBS2:
-        icon: si-proxmox-#E57000
-        href: https://pbs2.lab.wdalgleish.com:8007/
-        description: Proxmox Backup Server
+          icon: si-proxmox-#E57000
+          href: https://pbs2.lab.wdalgleish.com:8007/
+          description: Proxmox Backup Server
       - NAS:
-        icon: si-truenas-#0095D5
-        href: https://nas.lab.wdalgleish.com/
-        description: TrueNAS Core
+          icon: si-truenas-#0095D5
+          href: https://nas.lab.wdalgleish.com/
+          description: TrueNAS Core
     - Networking:
       - Router:
           icon: si-mikrotik-#000000
@@ -50,23 +50,23 @@ data:
           description: Mikrotik router
     - Dashboards:
       - ArgoCD:
-        icon: si-argo-#EF7B4D
-        href: https://argocd.lab.wdalgleish.com/
-        description: ArgoCD
+          icon: si-argo-#EF7B4D
+          href: https://argocd.lab.wdalgleish.com/
+          description: ArgoCD
       - Uptime:
-        icon: si-uptimekuma-#5CDD8B
-        href: https://uptime.lab.wdalgleish.com/
-        description: Uptime Kuma
+          icon: si-uptimekuma-#5CDD8B
+          href: https://uptime.lab.wdalgleish.com/
+          description: Uptime Kuma
     - Services:
       - Documents:
-        icon: si-paperlessngx-#17541F
-        href: https://paperless.lab.wdalgleish.com/
-        description: Paperless-ngx
+          icon: si-paperlessngx-#17541F
+          href: https://paperless.lab.wdalgleish.com/
+          description: Paperless-ngx
       - Home Assistant:
-        icon: si-homeassistant-#18BCF2
-        href: https://homeassistant.lab.wdalgleish.com/
+          icon: si-homeassistant-#18BCF2
+          href: https://homeassistant.lab.wdalgleish.com/
       - Plex:
-        icon: si-plex-#EBAF00
-        href: https://plex.lab.wdalgleish.com:32400/
+          icon: si-plex-#EBAF00
+          href: https://plex.lab.wdalgleish.com:32400/
   widgets.yaml: ""
   docker.yaml: ""

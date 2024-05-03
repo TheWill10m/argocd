@@ -5,26 +5,26 @@ metadata:
   name: homepage
   namespace: default
   labels:
-    app: homepage
+    app.kubernetes.io/name: homepage
 spec:
   revisionHistoryLimit: 3
-  replicas: 1
+  replicas: 2
   strategy:
     type: RollingUpdate
   selector:
     matchLabels:
-      app: homepage
+      app.kubernetes.io/name: homepage
   template:
     metadata:
       labels:
-        app: homepage
+        app.kubernetes.io/name: homepage
     spec:
       dnsPolicy: ClusterFirst
       enableServiceLinks: true
       containers:
         - name: homepage
           image: "ghcr.io/gethomepage/homepage:v0.8.12"
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
           ports:
             - name: http
               containerPort: 3000
@@ -58,10 +58,10 @@ spec:
               name: logs
           resources:
             requests:
-              memory: "64Mi"
+              memory: "128Mi"
               cpu: "250m"
             limits:
-              memory: "128Mi"
+              memory: "256Mi"
               cpu: "500m"
       volumes:
         - name: homepage-config
