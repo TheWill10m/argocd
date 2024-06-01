@@ -1,0 +1,30 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: netbox
+  namespace: argocd
+  labels:
+    name: longhorn
+spec:
+  project: default
+
+  sources:
+    - chart: redis
+      repoURL: oci://registry-1.docker.io/bitnamicharts/redis
+      targetRevision: v19.5.0
+
+    - repoURL: https://github.com/thewill10m/argocd
+      targetRevision: main
+      path: apps/netbox
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: netbox
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
