@@ -1,0 +1,26 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: awx-operator
+  namespace: argocd
+  labels:
+    name: awx-operator
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/thewill10m/argocd
+    targetRevision: main
+    path: apps/awx
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: awx
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
