@@ -22,4 +22,4 @@ spec:
   tls:
     - hosts:
         - argocd-minipc.lab.wdalgleish.com
-      secretName: star-lab-wdalgleish-com
+      secretName: argocd-cert
