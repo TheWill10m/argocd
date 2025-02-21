@@ -1,0 +1,30 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: longhorn
+  namespace: argocd
+  labels:
+    name: longhorn
+spec:
+  project: default
+
+  sources:
+    - chart: awx-operator
+      repoURL: https://ansible-community.github.io/awx-operator-helm
+      targetRevision: v1.3.0
+
+    - repoURL: https://github.com/thewill10m/argocd
+      targetRevision: main
+      path: apps/awx
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: longhorn-system
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
