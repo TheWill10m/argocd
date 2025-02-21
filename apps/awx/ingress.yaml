@@ -22,4 +22,4 @@ spec:
   tls:
     - hosts:
         - awx.lab.wdalgleish.com
-      secretName: star-lab-wdalgleish-com
+      secretName: awx-cert
