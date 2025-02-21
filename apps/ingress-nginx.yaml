@@ -10,9 +10,9 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/thewill10m/argocd
-    targetRevision: main
-    path: apps/helm-ingress-nginx
+    chart: ingress-nginx
+    repoURL: https://kubernetes.github.io/ingress-nginx
+    targetRevision: v4.12.0
 
   destination:
     server: https://kubernetes.default.svc
